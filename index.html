@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+</head>
+<body>
+    <h1>Mortgage Calculator</h1>
+    <h2>Caculate your mortgage in two different ways</h2>
+    <div id="main-container">
+        <!-- Card calculator - for: months/years -->
+        <div id="mode-duration">
+            <h3>Calculate Duration:</h3>
+            <form id="input-duration" action="">
+                <p>How long will it take to pay it off?</p>
+                <br>
+                <label for="">Loan Amount:</label>
+                <input type="range" id="loan-duration" name="" min="" max="" value="" step="">
+                <br>
+                <label for="">Interest:</label>
+                <input type="range" id="interest-dutarion" name="" min="" max="" value="" step="">
+                <br>
+                <label for="">Monthly payment:</label>
+                <input type="range" id="payment-duration" name="" min="" max="" value="" step="">
+                <br>
+                <button>Calculate</button>
+            </form>
+        </div>
+        <!-- Card calculator - for: monthly payment -->
+        <div id="mode-payment">
+            <h3>Calculate Payment:</h3>
+            <form id="input-payment" action="">
+                <p>How much will my monthly payment be?</p>
+                <br>
+                <label for="">Loan amount:</label>
+                <input type="range" id="loan-payment" name="" min="" max="" value="" step="">
+                <br>
+                <label for="">Interest:</label>
+                <input type="range" id="interest-payment" name="" min="" max="" value="" step="">
+                <br>
+                <label for="">Duration:</label>
+                <input type="range" id="duration-payment" name="" min="" max="" value="" step="">
+                <br>
+                <button>Calculate</button>
+            </form>
+        </div>
+    </div>
+    <div id="feature"></div>
+</body>
+</html>
