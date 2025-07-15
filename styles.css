@@ -1,16 +1,79 @@
 @font-face {
-  font-family: 'Jost';
-  src: (url(fonts/Jost-VariableFont_wght.ttf)) format('truetype-variations');
+  font-family: "Lexend Zetta";
+  src: url("fonts/LexendZetta-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("fonts/Urbanist-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-VariableFont_wght.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-display: swap;
 }
 
 body {
-  font-family: 'Jost', sans-serif;
+  font-family: "Lexend Zetta", sans-serif;
   font-weight: 200;
   background-color:#B0BC98;
 }
 
+h1 {
+    padding: 2rem;
+}
+
+h2 {
+    padding-bottom: 0;
+}
+
 h1, h2, footer {
  text-align: center;   
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#mode-duration, #mode-payment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 6rem 2rem 6rem;
+    background-color: #939888;
+    font-weight: 300;
+    font-size: medium;
+    
+    /* border-radius: 2rem 1rem 3rem 0.5rem; */}
+
+#mode-duration {
+    border-radius: 2rem 0 0 2rem;
+}
+
+#mode-payment {
+    border-radius: 0 2rem 2rem 0;
+}
+
+label {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 300;
+}
+
+.label-payment {
+    font-family: "Outfit", sans-serif;
+}
+
+.calculate-result {
+    padding: 2rem;
 }
