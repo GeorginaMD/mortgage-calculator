@@ -55,15 +55,50 @@ h1, h2, footer {
     font-weight: 300;
     font-size: medium;
     
-    /* border-radius: 2rem 1rem 3rem 0.5rem; */}
+    border-radius: 2rem 1rem 3rem 0.5rem;
+  }
 
-#mode-duration {
+/* #mode-duration {
     border-radius: 2rem 0 0 2rem;
 }
 
 #mode-payment {
     border-radius: 0 2rem 2rem 0;
+} */
+
+/* STYLES: INPUT TYPE RANGE */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: black;
+    outline: none;
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
 }
+
+/* input[type="range"]::-webkit-slider-track {
+  width: 100%;
+  height: 4px; 
+  background: black;
+  border-radius: 2px;
+  border: none;
+  box-shadow: none; 
+  -webkit-appearance: none;
+} */
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 16px;
+  background: green;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease; */
 
 label {
     font-family: "Urbanist", sans-serif;
