@@ -8,30 +8,31 @@
     <title>Mortgage Calculator</title>
 </head>
 <body>
+    <div id="main-container">
     <h1>MORTGAGE CALCULATOR</h1>
     <h2>Caculate your mortgage in two different ways:</h2>
-    <div id="main-container">
+    <div id="cards-container">
         <!-- Card calculator - for: months/years -->
         <div id="mode-duration">
             <h3>Calculate Duration:</h3>
             <form id="input-duration" action="">
-                <p>How long will it take to pay it off?</p>
+                <p class="italic"><i>How long will it take to pay it off?</i></p>
                 <br>
-                <label for="loan-duration">Loan Amount:</label>
+                <label class="label-duration" for="loan-duration">Loan Amount:</label>
                 <span class="min-max-range">30.000 E - 500.000 E</span>
                 <input type="range" id="loan-duration" name="loan-duration" min="30000" max="500000" value="30000" step="5000"><span id="current-loan-duration"></span>
                 <br>
-                <label for="interest-dutarion">Interest (%) :</label>
+                <label class="label-duration" for="interest-dutarion">Interest (%) :</label>
                 <span class="min-max-range">1 % - 8 %</span>
                 <input type="range" id="interest-dutarion" name="interest-dutarion" min="1" max="8" value="1" step="0.5"><span id="current-interest-dutarion"></span>
                 <br>
-                <label for="payment-duration">Monthly payment:</label>
+                <label class="label-duration" for="payment-duration">Monthly payment:</label>
                 <span class="min-max-range">100 E - 6000 E</span>
                 <input type="range" id="payment-duration" name="payment-duration" min="100" max="6000" value="100" step="100"><span id="current-payment-duration"></span>
                 <br>
                 <div class="calculate-result">
-                    <button>Calculate</button>
-                    <span>Result:</span><input type="text">
+                    <button type="submit" class="calculate-button">Calculate</button>
+                    <span class="label-result">Result:</span><input type="text" class="input-result">
                 </div>
             </form>
         </div>
@@ -39,7 +40,7 @@
         <div id="mode-payment">
             <h3>Calculate Payment:</h3>
             <form id="input-payment" action="">
-                <p>How much will the monthly payment be?</p>
+                <p class="italic"><i>How much will the monthly payment be?</i></p>
                 <br>
                 <label class="label-payment" for="loan-payment">Loan amount:</label>
                 <span class="min-max-range">30.000 E - 500.000 E</span>
@@ -54,8 +55,8 @@
                 <input type="range" id="duration-payment" name="duration-payment" min="5" max="35" value="5" step="1"><span id="current-duration-payment"></span>
                 <br>
                 <div class="calculate-result">
-                    <button>Calculate</button>
-                    <span>Result:</span><input type="text">
+                    <button type="submit" class="calculate-button">Calculate</button>
+                    <span class="label-result">Result:</span><input type="text" class="input-result">
                 </div>
             </form>
         </div>
@@ -70,5 +71,6 @@
             </ul>
         </div>
     </footer>
+    </div>
 </body>
 </html>
