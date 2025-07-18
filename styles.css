@@ -151,4 +151,16 @@ input[type="range"]::-webkit-slider-thumb {
 .label-result {
   font-family: "Outfit", sans-serif;
   text-shadow: 0 1px #B0BC98;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+.display-slider-input {
+  margin-left: 1rem;
+  font-family: "Outfit", sans-serif;
+  text-shadow: 0 1px #B0BC98;
+}
+
+.examples-range {
+  font-size: 0.8rem;
 }
