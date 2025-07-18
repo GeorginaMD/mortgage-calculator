@@ -23,7 +23,10 @@ body {
   font-family: "Jura", sans-serif;
   font-weight: 200;
   font-size: 1rem;
-  background-color:rgb(106, 112, 97);
+  background-image: url(images/renith-r-DCEiz9lchwY-unsplash.jpg);
+  background-size: 100% 100%;
+
+  /* background-color:rgb(106, 112, 97); */
   /* background-color:rgb(173, 179, 162); */
 }
 

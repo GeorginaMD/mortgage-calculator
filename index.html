@@ -15,48 +15,48 @@
         <!-- Card calculator - for: months/years -->
         <div id="mode-duration">
             <h3>Calculate Duration:</h3>
-            <form id="input-duration" action="">
+            <form id="input-duration-form" novalidate>
                 <p class="italic"><i>How long will it take to pay it off?</i></p>
                 <br>
                 <label class="label-duration" for="loan-duration">Loan Amount:</label>
-                <span class="min-max-range">30.000 E - 500.000 E</span>
-                <input type="range" id="loan-duration" name="loan-duration" min="30000" max="500000" value="30000" step="5000"><span id="current-loan-duration"></span>
+                <span class="min-max-range">30.000 E - 500.000 E</span><span id="current-loan-duration"></span>
+                <input type="range" id="loan-duration" name="loan-duration" min="30000" max="500000" value="30000" step="5000">
                 <br>
                 <label class="label-duration" for="interest-dutarion">Interest (%) :</label>
-                <span class="min-max-range">1 % - 8 %</span>
-                <input type="range" id="interest-dutarion" name="interest-dutarion" min="1" max="8" value="1" step="0.5"><span id="current-interest-dutarion"></span>
+                <span class="min-max-range">1 % - 8 %</span><span id="current-interest-dutarion"></span>
+                <input type="range" id="interest-dutarion" name="interest-dutarion" min="1" max="8" value="1" step="0.5">
                 <br>
                 <label class="label-duration" for="payment-duration">Monthly payment:</label>
-                <span class="min-max-range">100 E - 6000 E</span>
-                <input type="range" id="payment-duration" name="payment-duration" min="100" max="6000" value="100" step="100"><span id="current-payment-duration"></span>
+                <span class="min-max-range">100 E - 6000 E</span><span id="current-payment-duration"></span>
+                <input type="range" id="payment-duration" name="payment-duration" min="100" max="6000" value="100" step="100">
                 <br>
                 <div class="calculate-result">
                     <button type="submit" class="calculate-button">Calculate</button>
-                    <span class="label-result">Result:</span><input type="text" class="input-result">
+                    <span class="label-result">Result:</span><input type="text" id="input-result-duration" class="input-result">
                 </div>
             </form>
         </div>
         <!-- Card calculator - for: monthly payment -->
         <div id="mode-payment">
             <h3>Calculate Payment:</h3>
-            <form id="input-payment" action="">
+            <form id="input-payment-form" novalidate>
                 <p class="italic"><i>How much will the monthly payment be?</i></p>
                 <br>
                 <label class="label-payment" for="loan-payment">Loan amount:</label>
-                <span class="min-max-range">30.000 E - 500.000 E</span>
-                <input type="range" id="loan-payment" name="loan-payment" min="30000" max="500000" value="30000" step="5000"><span id="current-loan-payment"></span>
+                <span class="min-max-range">30.000 E - 500.000 E</span><span id="current-loan-payment"></span>
+                <input type="range" id="loan-payment" name="loan-payment" min="30000" max="500000" value="30000" step="5000">
                 <br>
                 <label class="label-payment" for="interest-payment">Interest (%) :</label>
-                <span class="min-max-range">1 % - 8 %</span>
-                <input type="range" id="interest-payment" name="interest-payment" min="1" max="8" value="1" step="0.5"><span id="current-interest-payment"></span>
+                <span class="min-max-range">1 % - 8 %</span><span id="current-interest-payment"></span>
+                <input type="range" id="interest-payment" name="interest-payment" min="1" max="8" value="1" step="0.5">
                 <br>
                 <label class="label-payment" for="duration-payment">Duration (years) :</label>
-                <span class="min-max-range">5 years - 35 years</span>
-                <input type="range" id="duration-payment" name="duration-payment" min="5" max="35" value="5" step="1"><span id="current-duration-payment"></span>
+                <span class="min-max-range">5 years - 35 years</span><span id="current-duration-payment"></span>
+                <input type="range" id="duration-payment" name="duration-payment" min="5" max="35" value="5" step="1">
                 <br>
                 <div class="calculate-result">
                     <button type="submit" class="calculate-button">Calculate</button>
-                    <span class="label-result">Result:</span><input type="text" class="input-result">
+                    <span class="label-result">Result:</span><input type="text" id="input-result-payment" class="input-result">
                 </div>
             </form>
         </div>
