@@ -23,10 +23,10 @@ body {
   font-family: "Jura", sans-serif;
   font-weight: 200;
   font-size: 1rem;
-  background-image: url(images/renith-r-DCEiz9lchwY-unsplash.jpg);
-  background-size: 100% 100%;
+  /* background-image: url(images/renith-r-DCEiz9lchwY-unsplash.jpg);
+  background-size: 100% 100%; */
 
-  /* background-color:rgb(106, 112, 97); */
+  background-color: #787c6e;
   /* background-color:rgb(173, 179, 162); */
 }
 
@@ -136,12 +136,13 @@ input[type="range"]::-webkit-slider-thumb {
   font-size: 1rem;
   cursor: pointer;
   display: inline-block;
-  /* border: 2px solid #000; */
   text-align: center;
   transition: background 0.3s ease;
 }
 
 .input-result {
+  font-family: inherit;
+  font-size: 1rem;
   background-color: #B0BC98;
   border-radius: 0.5rem 0.5rem 1.5rem 0.5rem;
   border: none;

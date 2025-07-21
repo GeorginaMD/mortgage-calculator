@@ -1,20 +1,20 @@
 //SELECTORS FOR CALCULATING DURATION :
 // inputs type range
 const loanDuration = document.getElementById("loan-duration");
-const interestDuration = document.getElementById("interest-dutarion");
+const interestDuration = document.getElementById("interest-duration");
 const paymentDuration = document.getElementById("payment-duration");
 // span - user input
-const displayLoanDuration = document.getElementById("current-loan-duration");
-const displayInterestDuration = document.getElementById(
+let displayLoanDuration = document.getElementById("current-loan-duration");
+let displayInterestDuration = document.getElementById(
   "current-interest-dutarion"
 );
-const displayPaymentDuration = document.getElementById(
+let displayPaymentDuration = document.getElementById(
   "current-payment-duration"
 );
-// input type text - result
-const inputResultDuration = document.getElementById("input-result-duration");
 // form - button
 const calcBtnDuration = document.getElementById("input-duration-form");
+// input type text - result
+const inputResultDuration = document.getElementById("input-result-duration");
 
 //SELECTORS FOR CALCULATING PAYMENT QTY :
 // inputs type range
@@ -29,24 +29,22 @@ const displayInterestPayment = document.getElementById(
 const displayDurationPayment = document.getElementById(
   "current-duration-payment"
 );
-// input type text - result
-const inputResultPayment = document.getElementById("input-result-payment");
 // form - button
 const calcBtnPayment = document.getElementById("input-payment-form");
+// input type text - result
+const inputResultPayment = document.getElementById("input-result-payment");
 
 // LISTENERS FOR DURATION :
 // Update span values as user moves sliders:
 loanDuration.addEventListener("input", () => {
-  displayLoanDuration.textContent = `${loanDuration.value} E`;
+  displayLoanDuration = `${loanDuration.value} E`;
 });
 interestDuration.addEventListener("input", () => {
-  displayInterestDuration.textContent = `${interestDuration.value} %`;
+  displayInterestDuration = `${interestDuration.value} %`;
 });
 paymentDuration.addEventListener("input", () => {
-  displayPaymentDuration.textContent = `${paymentDuration.value} E`;
+  displayPaymentDuration = `${paymentDuration.value} E`;
 });
-// form - button
-calcBtnDuration.addEventListener("submit", () => {});
 
 // LISTENERS FOR PAYMENT QTY :
 //inputs type range
@@ -61,3 +59,25 @@ duartionPayment.addEventListener("input", () => {
 });
 // form - button
 calcBtnPayment.addEventListener("submit", () => {});
+
+// HANDLE THE CALCULATION ON SUBMIT - DURATION
+
+calcBtnDuration.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const loan = Number(loanDuration.value);
+  const monthlyPayment = Number(paymentDuration.value);
+  const annualInterest = Number(interestDuration.value);
+  const rate = annualInterest / 12 / 100;
+
+  const numerator = Math.log(monthlyPayment / (monthlyPayment - loan * rate));
+  const denominator = Math.log(1 + rate);
+  const months = numerator / denominator;
+
+  const totalMonths = Math.round(months);
+  const years = Math.floor(totalMonths / 12);
+  const remainingMonths = totalMonths % 12;
+
+  inputResultDuration.value = `  ${years} years and ${remainingMonths} months`;
+});
+
+// HANDLE THE CALCULATION ON SUBMIT - PAYMENT QTY
