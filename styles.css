@@ -147,6 +147,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 0.5rem 0.5rem 1.5rem 0.5rem;
   border: none;
   height: 3rem;
+  padding: 1rem;
 }
 
 .label-result {

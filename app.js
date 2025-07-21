@@ -77,7 +77,7 @@ calcBtnDuration.addEventListener("submit", (e) => {
   const years = Math.floor(totalMonths / 12);
   const remainingMonths = totalMonths % 12;
 
-  inputResultDuration.value = `  ${years} years and ${remainingMonths} months`;
+  inputResultDuration.textContent = `  ${years} years and ${remainingMonths} months`;
 });
 
 // HANDLE THE CALCULATION ON SUBMIT - PAYMENT QTY
