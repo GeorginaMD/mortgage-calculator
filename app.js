@@ -1,9 +1,9 @@
 //SELECTORS FOR CALCULATING DURATION :
-// inputs type range
+// inputs type range selectors - duration
 const loanDuration = document.getElementById("loan-duration");
 const interestDuration = document.getElementById("interest-duration");
 const paymentDuration = document.getElementById("payment-duration");
-// span - user input
+// span selectors for user input
 let displayLoanDuration = document.getElementById("current-loan-duration");
 let displayInterestDuration = document.getElementById(
   "current-interest-duration"
@@ -11,17 +11,17 @@ let displayInterestDuration = document.getElementById(
 let displayPaymentDuration = document.getElementById(
   "current-payment-duration"
 );
-// form - button
+// form selector:
 const calcBtnDuration = document.getElementById("input-duration-form");
-// input type text - result
+// displaying result selector - duration
 const inputResultDuration = document.getElementById("input-result-duration");
 
 //SELECTORS FOR CALCULATING PAYMENT QTY :
-// inputs type range
+// inputs type range selectors - payment
 const loanPayment = document.getElementById("loan-payment");
 const interestPayment = document.getElementById("interest-payment");
 const duartionPayment = document.getElementById("duration-payment");
-// span -  user input
+// span selectors for user input
 const displayLoanPayment = document.getElementById("current-loan-payment");
 const displayInterestPayment = document.getElementById(
   "current-interest-payment"
@@ -29,9 +29,9 @@ const displayInterestPayment = document.getElementById(
 const displayDurationPayment = document.getElementById(
   "current-duration-payment"
 );
-// form - button
+// form selector:
 const calcBtnPayment = document.getElementById("input-payment-form");
-// input type text - result
+// displaying result selector- payment
 const inputResultPayment = document.getElementById("input-result-payment");
 
 // LISTENERS FOR DURATION :

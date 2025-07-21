@@ -5,43 +5,36 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Genos";
-  src: url("fonts/Genos-VariableFont_wght.ttf") format("truetype-variations");
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-@font-face {
+/* @font-face {
   font-family: "Outfit";
   src: url("fonts/Outfit-VariableFont_wght.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-display: swap;
-}
+} */
 
 body {
   font-family: "Jura", sans-serif;
   font-weight: 200;
   font-size: 1rem;
-  /* background-image: url(images/renith-r-DCEiz9lchwY-unsplash.jpg);
-  background-size: 100% 100%; */
+  background-image: url(images/rainbow-vortex.svg);
+  background-size: 100% 100%;
 
-  background-color: #787c6e;
-  /* background-color:rgb(173, 179, 162); */
+  /* background-color: #787c6e; */
+
 }
 
 h1 {
-  font-family: "Genos", sans-serif;
+  /* font-family: "Jura", sans-serif; */
   font-size: 3rem;
   font-weight: 600;
-  color: rgb(32, 33, 32);
-  text-shadow: 0 1px #94968d;
+  color: #787c6e;
+  text-shadow: 0 1px #9da097;
 }
 
 h2 {
   font-size: 1.5rem;
   padding-bottom: 0;
-  color: rgb(44, 46, 44);
+  color: rgb(119, 125, 119);
   text-shadow: 0 1px rgb(32, 33, 32);
   
 }
@@ -53,7 +46,7 @@ h1, h2, footer {
 h3 {
   margin: 2px;
   color: rgb(54, 56, 54);
-  text-shadow: 0 1px #B0BC98;
+  text-shadow: 0 1px #888f7c;
 }
 
 #cards-container {
@@ -71,7 +64,8 @@ h3 {
     justify-content: center;
     text-align: center;
     padding: 2rem 6rem 2rem 6rem;
-    background-color: #939888;
+    background-color: rgb(147, 152, 136, 0.6);
+    /* background-color: #939888; */
     box-shadow: -2px -2px 7px 2px #aab09d, 2px 2px 7px 2px #a1a695;
     font-weight: 300;
     font-size: medium;
@@ -117,9 +111,9 @@ input[type="range"]::-webkit-slider-thumb {
   transition: all 0.2s ease; */
 }
 
-.label-payment, .label-duration {
-    font-family: "Outfit", sans-serif;
-}
+/* .label-payment, .label-duration {
+    font-family: "Jura", sans-serif;
+} */
 
 .calculate-result {
     padding: 2rem;
@@ -127,40 +121,45 @@ input[type="range"]::-webkit-slider-thumb {
 
 .calculate-button {
   all: unset; 
-  background-color: #B0BC98; 
-  color: #000;
+  box-shadow:  2px 2px 5px 0 #000, 
+               -2px -2px 5px 0 #ccc;
+  opacity: 0.5;
   height: 2rem;
   padding: 7px 15px;
   border-radius: 1rem 0.5rem 0.5rem 0.5rem;
-  font-family: inherit;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  transition: background 0.3s ease;
+  /* transition: background 0.3s ease; */
 }
 
 .input-result {
-  font-family: inherit;
   font-size: 1rem;
-  background-color: #B0BC98;
+  font-weight: 600;
   border-radius: 0.5rem 0.5rem 1.5rem 0.5rem;
   border: none;
   height: 3rem;
   padding: 1rem;
+  opacity: 0.5;
+  box-shadow:  2px 2px 5px 0 #000, 
+               -2px -2px 5px 0 #ccc;        
 }
 
 .label-result {
-  font-family: "Outfit", sans-serif;
-  text-shadow: 0 1px #B0BC98;
+  text-shadow: 0 1px #838978;
   margin-left: 2rem;
   margin-right: 1rem;
+  font-weight: 600;
 }
 
 .display-slider-input {
   margin-left: 1rem;
-  font-family: "Outfit", sans-serif;
-  text-shadow: 0 1px #B0BC98;
+  /* background-color: black; */
+  text-shadow: 0 1px #838978;
+  font-weight: 600;
+  width: 8ch;
 }
 
 .examples-range {
