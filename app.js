@@ -47,7 +47,7 @@ paymentDuration.addEventListener("input", () => {
 });
 
 // LISTENERS FOR PAYMENT QTY :
-//inputs type range
+// Update span values as user moves sliders:
 loanPayment.addEventListener("input", () => {
   displayLoanPayment.textContent = `${loanPayment.value} E`;
 });
@@ -57,8 +57,6 @@ interestPayment.addEventListener("input", () => {
 duartionPayment.addEventListener("input", () => {
   displayDurationPayment.textContent = `${duartionPayment.value} years`;
 });
-// form - button
-calcBtnPayment.addEventListener("submit", () => {});
 
 // HANDLE THE CALCULATION ON SUBMIT - DURATION
 
@@ -72,7 +70,6 @@ calcBtnDuration.addEventListener("submit", (e) => {
   const numerator = Math.log(monthlyPayment / (monthlyPayment - loan * rate));
   const denominator = Math.log(1 + rate);
   const months = numerator / denominator;
-
   const totalMonths = Math.round(months);
   const years = Math.floor(totalMonths / 12);
   const remainingMonths = totalMonths % 12;
@@ -81,3 +78,19 @@ calcBtnDuration.addEventListener("submit", (e) => {
 });
 
 // HANDLE THE CALCULATION ON SUBMIT - PAYMENT QTY
+
+calcBtnPayment.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const loanAmount = Number(loanPayment.value);
+  const annualIntRate = Number(interestPayment.value);
+  const loanTermYears = Number(duartionPayment.value);
+  const monthlyIntRate = annualIntRate / 100 / 12;
+  const totalPayments = loanTermYears * 12;
+
+  const numerator =
+    monthlyIntRate * Math.pow(1 + monthlyIntRate, totalPayments);
+  const denominator = Math.pow(1 + monthlyIntRate, totalPayments) - 1;
+  const monthlyPayment = loanAmount * (numerator / denominator);
+
+  inputResultPayment.textContent = ` ${monthlyPayment.toFixed(2)} E`;
+});
