@@ -6,7 +6,7 @@ const paymentDuration = document.getElementById("payment-duration");
 // span - user input
 let displayLoanDuration = document.getElementById("current-loan-duration");
 let displayInterestDuration = document.getElementById(
-  "current-interest-dutarion"
+  "current-interest-duration"
 );
 let displayPaymentDuration = document.getElementById(
   "current-payment-duration"
@@ -37,13 +37,13 @@ const inputResultPayment = document.getElementById("input-result-payment");
 // LISTENERS FOR DURATION :
 // Update span values as user moves sliders:
 loanDuration.addEventListener("input", () => {
-  displayLoanDuration = `${loanDuration.value} E`;
+  displayLoanDuration.textContent = `${loanDuration.value} E`;
 });
 interestDuration.addEventListener("input", () => {
-  displayInterestDuration = `${interestDuration.value} %`;
+  displayInterestDuration.textContent = `${interestDuration.value} %`;
 });
 paymentDuration.addEventListener("input", () => {
-  displayPaymentDuration = `${paymentDuration.value} E`;
+  displayPaymentDuration.textContent = `${paymentDuration.value} E`;
 });
 
 // LISTENERS FOR PAYMENT QTY :
