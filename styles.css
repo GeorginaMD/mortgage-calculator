@@ -17,7 +17,7 @@ body {
   font-weight: 200;
   font-size: 1rem;
   background-image: url(images/rainbow-vortex.svg);
-  background-size: 100% 100%;
+  background-size: 104% 100%;
   /* background-color: #787c6e; */
 
 }
@@ -182,16 +182,20 @@ input[type="range"]::-webkit-slider-thumb {
   justify-content: end;
 }
 
-
+.my-chart {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: #b1b5ab;
+}
 
 #myChart {
  width: 50vw !important;
- height: 300px !important;
+ height: 290px !important;
  background-color: rgb(147, 152, 136, 0.6);
+ box-shadow: -1px -1px 4px 1px #aab09d, 1px 1px 4px 1px #a1a695;
  border-radius: 2rem 1rem 3rem 0.5rem;
  padding: 1rem;
  margin: 0 auto;
- margin-top: 4rem;
  margin-bottom: 1rem;
 }
 
@@ -199,13 +203,38 @@ a {
   color: #b1b5ab;
 }
 
-@media screen and (max-width: 1050px) {
-  body {
+/*  STYLES: MEDIA QUERIES  */
+
+@media screen and (min-width: 55px) and (max-width: 349px) {
+body {
     background-image: url(images/rainbow-vortex.svg);
-    background-size: 150% 105%;
+    background-size: cover/* 150% 90% */;
   }
   #cards-container {
     grid-template-columns: 1fr;
+  }
+  .card {
+    width: 100%;
+  }
+} 
+
+@media screen and (min-width: 350px) and (max-width: 860px) {
+  body {
+    background-image: url(images/rainbow-vortex.svg);
+    background-size: cover/* 150% 90% */;
+  }
+  #cards-container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 861px) and (max-width: 1050px) {
+  body {
+    background-image: url(images/rainbow-vortex.svg);
+    background-size: cover/* 150% 90% */;
   }
   .card {
     width: 100%;
@@ -221,5 +250,10 @@ a {
 
 }
 
-/* @media screen and (min-width: 1051px) and (max-width: 1286px) {
-} */
+@media screen and (min-width: 1051px) and (max-width: 1450px) {
+body {
+    background-image: url(images/rainbow-vortex.svg);
+    background-size: cover/* 150% 90% */;
+  }
+} 
+
