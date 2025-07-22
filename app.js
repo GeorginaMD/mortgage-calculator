@@ -94,3 +94,26 @@ calcBtnPayment.addEventListener("submit", (e) => {
 
   inputResultPayment.textContent = ` ${monthlyPayment.toFixed(2)} E`;
 });
+
+const chart = document.getElementById("myChart");
+
+new Chart(chart, {
+  type: "bar",
+  data: {
+    labels: ["2023", "2022", "2021", "2020", "2019"],
+    datasets: [
+      {
+        label: "Interest rates per year:",
+        data: [3.75, 2, 2.5, 2.53, 2.47],
+        borderWidth: 1,
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+});
