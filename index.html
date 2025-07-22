@@ -15,7 +15,7 @@
         <!-- Card calculator - for: months/years -->
         <div id="mode-duration">
             <h3>Calculate Duration:</h3>
-            <form id="input-duration-form" novalidate>
+            <form id="input-duration-form" class="card" novalidate>
                 <p class="italic"><i>How long will it take to pay it off?</i></p>
                 <br>
                 <label class="label-duration" for="loan-duration">Loan Amount:</label>
@@ -31,15 +31,17 @@
                 <input type="range" id="payment-duration" name="payment-duration" min="100" max="6000" value="100" step="100">
                 <br>
                 <div class="calculate-result">
-                    <button type="submit" class="calculate-button">Calculate</button>
-                    <span class="label-result">Result:</span><span id="input-result-duration" class="input-result">..duration..</span><!-- <input type="text" id="input-result-duration" class="input-result"> -->
+                    <button type="submit" class="calculate-button"> Calculate </button>
+                    <div class="result-group">
+                        <span class="label-result">Result:</span><span id="input-result-duration" class="input-result">..duration..</span><!-- <input type="text" id="input-result-duration" class="input-result"> -->
+                    </div>
                 </div>
             </form>
         </div>
         <!-- Card calculator - for: monthly payment -->
         <div id="mode-payment">
             <h3>Calculate Payment:</h3>
-            <form id="input-payment-form" novalidate>
+            <form id="input-payment-form" class="card" novalidate>
                 <p class="italic"><i>How much will the monthly payment be?</i></p>
                 <br>
                 <label class="label-payment" for="loan-payment">Loan amount:</label>
@@ -55,8 +57,10 @@
                 <input type="range" id="duration-payment" name="duration-payment" min="5" max="35" value="5" step="1">
                 <br>
                 <div class="calculate-result">
-                    <button type="submit" class="calculate-button">Calculate</button>
-                    <span class="label-result">Result:</span><span id="input-result-payment" class="input-result">..quantity..</span><!-- <input type="text" id="input-result-payment" class="input-result"> -->
+                    <button type="submit" class="calculate-button"> Calculate </button>
+                    <div class="result-group">
+                        <span class="label-result">Result:</span><span id="input-result-payment" class="input-result">..quantity..</span><!-- <input type="text" id="input-result-payment" class="input-result"> -->
+                    </div>
                 </div>
             </form>
         </div>
@@ -69,6 +73,9 @@
                 <li>2023</li>
                 <li>2022</li>
             </ul>
+        </div>
+        <div class="credit-link">
+            <a href="https://www.svgbackgrounds.com/category/gradient/">Gradient Backgrounds by SVGBackgrounds.com</a>
         </div>
     </footer>
     </div>
