@@ -70,7 +70,7 @@ h3 {
     border-radius: 2rem 1rem 3rem 0.5rem;
   }
 
-  #mode-duration:hover, #mode-payment:hover, input[type="range"]::-webkit-slider-thumb:hover, .calculate-button:hover {
+  #mode-duration:hover, #mode-payment:hover, input[type="range"]::-webkit-slider-thumb:hover, .calculate-button:hover, .reset-button:hover {
     box-shadow: -2px -2px 7px 2px #bcc2ad, 2px 2px 7px 2px #bcc2ad;
   }
 
@@ -147,7 +147,7 @@ input[type="range"]::-webkit-slider-thumb {
   /* transition: background 0.3s ease; */
 }
 
-.input-result {
+.input-result { 
   font-size: 1rem;
   font-weight: 600;
   border-radius: 0.5rem 0.5rem 1.5rem 0.5rem;
@@ -175,6 +175,25 @@ input[type="range"]::-webkit-slider-thumb {
 
 .examples-range {
   font-size: 0.8rem;
+}
+
+/* .reset {
+  text-align: center;
+  border: 2px solid red;
+} */
+
+.reset-button {
+  font-family: "Jura", sans-serif;
+  border: none;
+  background-color: rgb(147, 152, 136, 0.6);
+  box-shadow:  2px 2px 5px 0 #000, 
+               -2px -2px 5px 0 #ccc;
+  opacity: 0.5;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 2rem;
+  cursor: pointer;
 }
 
 .credit-link {
