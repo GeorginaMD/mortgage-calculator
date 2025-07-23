@@ -15,6 +15,8 @@ let displayPaymentDuration = document.getElementById(
 const calcBtnDuration = document.getElementById("input-duration-form");
 // displaying result selector - duration
 const inputResultDuration = document.getElementById("input-result-duration");
+// reset button selector
+const resetButtonDuration = document.getElementById("resetDuration");
 
 //SELECTORS FOR CALCULATING PAYMENT QTY :
 // inputs type range selectors - payment
@@ -33,6 +35,8 @@ const displayDurationPayment = document.getElementById(
 const calcBtnPayment = document.getElementById("input-payment-form");
 // displaying result selector- payment
 const inputResultPayment = document.getElementById("input-result-payment");
+// reset button selector
+const resetButtonPayment = document.getElementById("resetPayment");
 
 // LISTENERS FOR DURATION :
 // Update span values as user moves sliders:
@@ -95,6 +99,52 @@ calcBtnPayment.addEventListener("submit", (e) => {
   inputResultPayment.textContent = ` ${monthlyPayment.toFixed(2)} E`;
 });
 
+// RESETING DEFAULT VALUES - DURATION
+const defaultDurationValues = {
+  loanDuration: 30000,
+  interestDuration: 1,
+  paymentDuration: 100,
+};
+// set sliders to default:
+resetButtonDuration.addEventListener("click", () => {
+  // set sliders to default:
+  document.getElementById("loan-duration").value =
+    defaultDurationValues.loanDuration;
+  document.getElementById("interest-duration").value =
+    defaultDurationValues.interestDuration;
+  document.getElementById("payment-duration").value =
+    defaultDurationValues.paymentDuration;
+  // set display spans to default:
+  document.getElementById("current-loan-duration").textContent = "";
+  document.getElementById("current-interest-duration").textContent = "";
+  document.getElementById("current-payment-duration").textContent = "";
+  // clear the result span:
+  document.getElementById("input-result-duration").textContent = "..duration..";
+});
+
+// RESETING DEFAULT VALUES - PAYMENT
+const defaultPaymentValues = {
+  loanPayment: 30000,
+  interestPayment: 1,
+  duartionPayment: 5,
+};
+resetButtonPayment.addEventListener("click", () => {
+  // set sliders to default:
+  document.getElementById("loan-payment").value =
+    defaultPaymentValues.loanPayment;
+  document.getElementById("interest-payment").value =
+    defaultPaymentValues.interestPayment;
+  document.getElementById("duration-payment").value =
+    defaultPaymentValues.duartionPayment;
+  // set display spans to default:
+  document.getElementById("current-loan-payment").textContent = "";
+  document.getElementById("current-interest-payment").textContent = "";
+  document.getElementById("current-duration-payment").textContent = "";
+  // clear the result span:
+  document.getElementById("input-result-payment").textContent = "..quantity..";
+});
+
+// SETTING CHART TABLE
 const chart = document.getElementById("myChart");
 
 new Chart(chart, {
