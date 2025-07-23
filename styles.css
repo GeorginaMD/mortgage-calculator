@@ -205,7 +205,7 @@ a {
 
 /*  STYLES: MEDIA QUERIES  */
 
-@media screen and (min-width: 55px) and (max-width: 349px) {
+@media screen and (min-width: 55px) and (max-width: 350px) {
 body {
     background-image: url(images/rainbow-vortex.svg);
     background-size: cover/* 150% 90% */;
@@ -218,6 +218,24 @@ body {
   }
 } 
 
+@media screen and (min-width: 55px) and (max-width: 550px) {
+  #input-result-duration {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (min-width: 55px) and (max-width: 650px) {
+  .result-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: end;
+    align-items: center;
+  }
+}
+
 @media screen and (min-width: 350px) and (max-width: 860px) {
   body {
     background-image: url(images/rainbow-vortex.svg);
@@ -229,9 +247,17 @@ body {
   .card {
     width: 100%;
   }
+  .result-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: end;
+    align-items: center;
+  }
 }
 
-@media screen and (min-width: 861px) and (max-width: 1050px) {
+@media screen and (min-width: 860px) and (max-width: 1050px) {
   body {
     background-image: url(images/rainbow-vortex.svg);
     background-size: cover/* 150% 90% */;
@@ -247,13 +273,30 @@ body {
     justify-content: end;
     align-items: center;
   }
-
+  #input-result-duration {
+    width: fit-content;
+    height: fit-content;
+  }
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1450px) {
 body {
     background-image: url(images/rainbow-vortex.svg);
     background-size: cover/* 150% 90% */;
+  }
+  .card {
+    width: 100%;
+  }
+  .result-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: end;
+    align-items: center;
+  }
+  #input-result-duration {
+    
   }
 } 
 
