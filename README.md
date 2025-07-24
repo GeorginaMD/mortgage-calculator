@@ -17,7 +17,7 @@ This is a vanilla JavaScript project that calculates either:
 
 ## Screenshot
 
-![Mortgage Calculator screenshot](./screenshot.png) <!-- Update path if needed -->
+![Mortgage Calculator screenshot](./images/mortgage-calculator-screenshot.PNG) 
 
 ## Technologies Used
 
@@ -28,7 +28,7 @@ This is a vanilla JavaScript project that calculates either:
 
 ## How to Use
 
-1. Clone the repo:
+1. Clone the repo.
 2. Open index.html in your browser.
 3. Use the sliders to input values and get instant calculations.
 4. Use the reset buttons to return to default values.
