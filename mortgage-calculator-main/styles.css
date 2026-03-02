@@ -1,0 +1,311 @@
+@font-face {
+  font-family: "Jura";
+  src: url("fonts/Jura-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+body {
+  font-family: "Jura", sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  background-image: url(images/rainbow-vortex.svg);
+  background-size: 104% 100%;
+
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #979a8e;
+  text-shadow: 0 1px #b1b5ab;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-bottom: 0;
+  color: rgb(119, 125, 119);
+  text-shadow: 0 1px rgb(32, 33, 32);
+}
+
+h1, h2, footer {
+ text-align: center;   
+}
+
+h3 {
+  margin: 2px;
+  color: rgb(54, 56, 54);
+  text-shadow: 0 1px #888f7c;
+}
+
+#cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#mode-duration, #mode-payment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 6rem 2rem 6rem;
+    background-color: rgb(147, 152, 136, 0.6);
+    box-shadow: -2px -2px 7px 2px #aab09d, 2px 2px 7px 2px #a1a695;
+    font-weight: 300;
+    font-size: medium;
+    border-radius: 2rem 1rem 3rem 0.5rem;
+  }
+
+  #mode-duration:hover, #mode-payment:hover, input[type="range"]::-webkit-slider-thumb:hover, .calculate-button:hover, .reset-button:hover {
+    box-shadow: -2px -2px 7px 2px #bcc2ad, 2px 2px 7px 2px #bcc2ad;
+  }
+
+  #input-duration-form {
+    padding: 0 1rem;
+  }
+
+
+/* STYLES: INPUT TYPE RANGE */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: rgb(54, 56, 54);
+    outline: none;
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+}
+
+/* input[type="range"]::-webkit-slider-track {
+  width: 100%;
+  height: 4px; 
+  background: black;
+  border-radius: 2px;
+  border: none;
+  box-shadow: none; 
+  -webkit-appearance: none;
+} */
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 13px;
+  height: 13px;
+  background: rgb(54, 56, 54);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: all 0.2s ease; */
+}
+
+/* .label-payment, .label-duration {
+    font-family: "Jura", sans-serif;
+} */
+
+.calculate-result {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+.calculate-button {
+  all: unset; 
+  box-shadow:  2px 2px 5px 0 #000, 
+               -2px -2px 5px 0 #ccc;
+  opacity: 0.5;
+  height: 2rem;
+  width: 8ch;
+  padding: 7px 15px;
+  border-radius: 1rem 0.5rem 0.5rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  
+  /* transition: background 0.3s ease; */
+}
+
+.input-result { 
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem 0.5rem 1.5rem 0.5rem;
+  border: none;
+  height: 1rem;
+  padding: 1rem;
+  opacity: 0.5;
+  box-shadow:  2px 2px 5px 0 #000, 
+               -2px -2px 5px 0 #ccc;        
+}
+
+.label-result {
+  text-shadow: 0 1px #838978;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.display-slider-input {
+  margin-left: 1rem;
+  /* background-color: black; */
+  text-shadow: 0 1px #838978;
+  font-weight: 600;
+  min-width: 90px;
+  display: inline-block;
+}
+
+.examples-range {
+  font-size: 0.8rem;
+}
+
+/* .reset {
+  text-align: center;
+  border: 2px solid red;
+} */
+
+.reset-button {
+  font-family: "Jura", sans-serif;
+  border: none;
+  background-color: rgb(147, 152, 136, 0.6);
+  box-shadow:  2px 2px 5px 0 #000, 
+               -2px -2px 5px 0 #ccc;
+  opacity: 0.5;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.credit-link {
+  display: flex;
+  justify-content: end;
+}
+
+.my-chart {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: #b1b5ab;
+}
+
+#myChart {
+ width: 50vw !important;
+ height: 290px !important;
+ background-color: rgb(147, 152, 136, 0.6);
+ box-shadow: -1px -1px 4px 1px #aab09d, 1px 1px 4px 1px #a1a695;
+ border-radius: 2rem 1rem 3rem 0.5rem;
+ padding: 1rem;
+ margin: 0 auto;
+ margin-bottom: 1rem;
+}
+
+a {
+  color: #b1b5ab;
+}
+
+/*  STYLES: MEDIA QUERIES  */
+
+@media screen and (min-width: 55px) and (max-width: 350px) {
+body {
+    background-image: url(images/rainbow-vortex.svg);
+    background-size: cover/* 150% 90% */;
+  }
+  #cards-container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    width: 100%;
+  }
+} 
+
+@media screen and (min-width: 55px) and (max-width: 550px) {
+  #input-result-duration {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (min-width: 55px) and (max-width: 650px) {
+  .result-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: end;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 860px) {
+  body {
+    background-image: url(images/rainbow-vortex.svg);
+    background-size: cover/* 150% 90% */;
+  }
+  #cards-container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    width: 100%;
+  }
+  .result-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: end;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 860px) and (max-width: 1050px) {
+  body {
+    background-image: url(images/rainbow-vortex.svg);
+    background-size: cover/* 150% 90% */;
+  }
+  .card {
+    width: 100%;
+  }
+  .result-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: end;
+    align-items: center;
+  }
+  #input-result-duration {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 1450px) {
+body {
+    background-image: url(images/rainbow-vortex.svg);
+    background-size: cover/* 150% 90% */;
+  }
+  .card {
+    width: 100%;
+  }
+  .result-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: end;
+    align-items: center;
+  }
+  #input-result-duration {
+    
+  }
+} 
+
