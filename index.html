@@ -13,13 +13,14 @@
     <h1>MORTGAGE CALCULATOR</h1>
     <h2>Caculate your mortgage in two different ways:</h2>
     <div id="cards-container">
+
         <!-- Card calculator - for: months/years -->
         <div id="mode-duration">
             <h3>Calculate Duration:</h3>
             <form id="input-duration-form" class="card" novalidate>
                 <p class="italic"><i>How long will it take to pay it off?</i></p>
                 <br>
-                <label class="label-duration" for="loan-duration">Loan Amount:</label>
+                <label class="label-duration" for="loan-duration">Loan amount:</label>
                 <span class="min-max-range"><i class="examples-range">(30.000 - 500.000 E)</i></span><span id="current-loan-duration" class="display-slider-input"></span>
                 <input type="range" id="loan-duration" name="loan-duration" min="30000" max="500000" value="30000" step="5000">
                 <br>
@@ -42,6 +43,7 @@
                 </div>
             </form>
         </div>
+
         <!-- Card calculator - for: monthly payment -->
         <div id="mode-payment">
             <h3>Calculate Payment:</h3>

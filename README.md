@@ -5,6 +5,9 @@ This is a vanilla JavaScript project that calculates either:
 - the **loan duration** based on loan amount, interest rate, and monthly payment, or
 - the **monthly payment** amount based on loan amount, interest rate, and duration.
 
+## Live Demo:
+- Try it here: https://georginamd.github.io/mortgage-calculator/
+
 ## Features
 
 - Two calculators:
@@ -17,7 +20,7 @@ This is a vanilla JavaScript project that calculates either:
 
 ## Screenshot
 
-![Mortgage Calculator screenshot](./images/mortgage-calculator-screenshot.PNG) 
+- Mortgage Calculator screenshot (./images/mortgage-calculator-screenshot.PNG) 
 
 ## Technologies Used
 
@@ -28,17 +31,15 @@ This is a vanilla JavaScript project that calculates either:
 
 ## How to Use
 
-1. Clone the repo.
-2. Open index.html in your browser.
+Simply click the live demo link above, or to run it locally:
+
+1. Clone the repo: `git clone https://github.com/GeorginaMD/mortgage-calculator.git`
+2. Open `index.html` in your browser.
 3. Use the sliders to input values and get instant calculations.
 4. Use the reset buttons to return to default values.
 
 ## Historical Interest Rates Chart
 This project includes a bar chart showing average interest rates in Spain from 2019 to 2023
-
-## Status
-✅ Project completed (version 1).
-🛠 A refactored version is in development under a new repo: mortgage-calculator-refactor
 
 ## License
 MIT License

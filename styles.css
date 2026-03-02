@@ -5,25 +5,16 @@
   font-display: swap;
 }
 
-/* @font-face {
-  font-family: "Outfit";
-  src: url("fonts/Outfit-VariableFont_wght.ttf") format("truetype-variations");
-  font-weight: 100 900;
-  font-display: swap;
-} */
-
 body {
   font-family: "Jura", sans-serif;
   font-weight: 200;
   font-size: 1rem;
   background-image: url(images/rainbow-vortex.svg);
   background-size: 104% 100%;
-  /* background-color: #787c6e; */
 
 }
 
 h1 {
-  /* font-family: "Jura", sans-serif; */
   font-size: 3rem;
   font-weight: 600;
   color: #979a8e;
@@ -54,7 +45,6 @@ h3 {
     padding: 2rem;
 }
 
-
 #mode-duration, #mode-payment {
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +53,6 @@ h3 {
     text-align: center;
     padding: 2rem 6rem 2rem 6rem;
     background-color: rgb(147, 152, 136, 0.6);
-    /* background-color: #939888; */
     box-shadow: -2px -2px 7px 2px #aab09d, 2px 2px 7px 2px #a1a695;
     font-weight: 300;
     font-size: medium;
@@ -74,11 +63,10 @@ h3 {
     box-shadow: -2px -2px 7px 2px #bcc2ad, 2px 2px 7px 2px #bcc2ad;
   }
 
-  /* #input-duration-form, #input-payment-form {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  } */
+  #input-duration-form {
+    padding: 0 1rem;
+  }
+
 
 /* STYLES: INPUT TYPE RANGE */
 
@@ -93,16 +81,6 @@ input[type="range"] {
     cursor: pointer;
 }
 
-/* input[type="range"]::-webkit-slider-track {
-  width: 100%;
-  height: 4px; 
-  background: black;
-  border-radius: 2px;
-  border: none;
-  box-shadow: none; 
-  -webkit-appearance: none;
-} */
-
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 13px;
@@ -111,16 +89,9 @@ input[type="range"]::-webkit-slider-thumb {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  /* box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: all 0.2s ease; */
 }
 
-/* .label-payment, .label-duration {
-    font-family: "Jura", sans-serif;
-} */
-
 .calculate-result {
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   justify-content: end;
@@ -143,8 +114,6 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  
-  /* transition: background 0.3s ease; */
 }
 
 .input-result { 
@@ -168,19 +137,15 @@ input[type="range"]::-webkit-slider-thumb {
 
 .display-slider-input {
   margin-left: 1rem;
-  /* background-color: black; */
   text-shadow: 0 1px #838978;
   font-weight: 600;
+  min-width: 90px;
+  display: inline-block;
 }
 
 .examples-range {
   font-size: 0.8rem;
 }
-
-/* .reset {
-  text-align: center;
-  border: 2px solid red;
-} */
 
 .reset-button {
   font-family: "Jura", sans-serif;
@@ -227,7 +192,7 @@ a {
 @media screen and (min-width: 55px) and (max-width: 350px) {
 body {
     background-image: url(images/rainbow-vortex.svg);
-    background-size: cover/* 150% 90% */;
+    background-size: cover;
   }
   #cards-container {
     grid-template-columns: 1fr;
